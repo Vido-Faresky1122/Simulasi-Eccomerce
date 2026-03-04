@@ -1,11 +1,11 @@
-<?php 
-    require_once '../app/core/Router.php';
-    use App\Core\Router;
-
-    $router = new Router();
-    $router->add('GET', '/students', 'StudentController', 'index');
-    $router->add('GET', '/students/create', 'StudentController', 'create');
-    $router->add('GET', '/students/{id}', 'StudentController', 'show');
-    $router->run();
-
-?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
