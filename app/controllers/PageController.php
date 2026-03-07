@@ -14,9 +14,9 @@ class PageController
         require_once '../app/views/account/login.php';
     }
 
-    public function show(string $id)
+    public function register()
     {
-        require_once '../app/views/students/show.php';
+        require_once '../app/views/account/register.php';
     }
 }
 
