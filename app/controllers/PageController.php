@@ -9,9 +9,13 @@ class PageController
         require_once '../app/views/landing/landing.php';
     }
 
+    public function login()
+    {
+        require_once '../app/views/account/login.php';
+    }
     public function create()
     {
-        require_once '../app/views/students/create.php';
+        require_once '../app/views/account/register.php';
     }
 
     public function show(string $id)
