@@ -31,20 +31,19 @@
 
     <h1 class="text-3xl font-semibold mb-8">Sign In</h1>
 
-    <!-- Card -->
-    <div class="bg-white shadow-md rounded-xl p-20 w-110">
+    <div class="bg-white shadow-md rounded-xl p-20 w-120">
 
-      <form class="space-y-4">
+      <form class="space-y-6">
         <input 
           type="text" 
           placeholder="Email/Username"
-          class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
         <input 
           type="password" 
           placeholder="Password"
-          class="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
         <p class="text-xs text-gray-500">
