@@ -32,36 +32,36 @@
     <h1 class="text-3xl font-semibold mb-8">Sign In</h1>
 
     <!-- Card -->
-    <div class="bg-white shadow-md rounded-xl p-20 w-110">
+    <div class="bg-white shadow-md rounded-xl p-20 w-120">
 
-      <form class="space-y-4">
+      <form class="space-y-6">
         <input 
           type="text" 
           placeholder="Username"
-          class="w-full border rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
         <input 
           type="text" 
           placeholder="Email"
-          class="w-full border rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
         <input 
           type="password" 
           placeholder="Password"
-          class="w-full border rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
         <input 
           type="password" 
           placeholder="Password Confirm"
-          class="w-full border rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
         <input 
           type="date" 
           placeholder="YYYY/MM/DD"
-          class="w-full border rounded-md px-3 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          class="w-full border rounded-md px-3 py-4 focus:outline-none focus:ring-2 focus:ring-indigo-400"
         >
 
 
