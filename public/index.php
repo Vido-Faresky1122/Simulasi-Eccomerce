@@ -3,8 +3,15 @@
     use App\Core\Router;
 
     $router = new Router();
-    $router->add('GET', '/login', 'PageController', 'login');
-    $router->add('GET', '/register', 'PageController', 'register');
-    $router->add('GET', '/home', 'PageController', 'index');
+
+    //Users Management
+    $router->add('GET', '/users/login', 'UserController', 'login');
+    $router->add('GET', '/users/register', 'UserController', 'register');
+
+    // Route
+    $router->add('GET', '/cart', 'CartController', 'cart');
+
+
+
     $router->run();
 ?>
