@@ -11,7 +11,10 @@
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
 
-
+    //Products Management
+    $router->add('GET', '/products', 'ProductController', 'index');
+    $router->add('GET', '/products/create', 'ProductController', 'create');
+    $router->add('GET', '/products/{id}', 'ProductController', 'show');
 
     $router->run();
 ?>
