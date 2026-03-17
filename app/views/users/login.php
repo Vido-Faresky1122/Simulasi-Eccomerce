@@ -63,24 +63,21 @@
   </main>
 
 
-  <footer class="border-t border-indigo-200 bg-indigo-600 py-8 px-10">
-    <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto ">
-
+  <footer class="mt-16 bg-indigo-700 text-white py-10 px-10">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
 
       <div>
-        <h2 class="text-lg text-white font-semibold mb-2">About US</h2>
-        <p class="text-white text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco
+        <h2 class="text-lg font-semibold mb-3">About US</h2>
+        <p class="text-sm text-indigo-100">
+          Sudi Mart adalah mitra andalan kebutuhan warga sekolah,
+          menyediakan berbagai alat tulis, keperluan belajar,
+          serta layanan pendukung sekolah yang cepat dan berkualitas.
         </p>
       </div>
 
-
       <div>
-        <h2 class="text-lg text-white font-semibold mb-2">Contact Us</h2>
-        <p class="text-white text-sm">
+        <h2 class="text-lg font-semibold mb-3">Contact Us</h2>
+        <p class="text-sm text-indigo-100">
           IG : @sudi_martt <br>
           TT : sm.mart <br>
           X : sudi-M <br>
