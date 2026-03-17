@@ -20,8 +20,8 @@
 
 
         <div class="flex items-center space-x-4">
-          <a href="/login" class="text-indigo-600 hover:text-indigo-800 px-3 py-2 rounded-md text-sm font-medium">Login</a>
-          <a href="/register" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Register</a>
+          <a href="/users/login" class="text-indigo-600 hover:text-indigo-800 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+          <a href="/users/register" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Register</a>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@
 
         <p class="text-xs text-gray-500">
           don't have an account?
-          <a href="/register" class="underline">Click Here</a>
+          <a href="/users/register" class="underline">Click Here</a>
         </p>
 
         <button 
