@@ -1,4 +1,4 @@
-<?php 
+<?php
 namespace App\Core;
 
 use App\Controller\PageController;
@@ -7,18 +7,18 @@ class Router
 {
     private array $routes = [];
 
-        public function add(string $method, string $uri, string $controller, string $function)
-        {
-            $this->routes[] = [
-                'method' => $method,
-                'uri' => $uri,
-                'controller' => $controller,
-                'function' => $function,
-            ];
-        }
+    public function add(string $method, string $uri, string $controller, string $function)
+    {
+        $this->routes[] = [
+            'method' => $method,
+            'uri' => $uri,
+            'controller' => $controller,
+            'function' => $function,
+        ];
+    }
 
-       
-        
+
+
     public function run()
     {
         $method = $_SERVER['REQUEST_METHOD'];
@@ -50,7 +50,7 @@ class Router
 
 
         http_response_code(404);
-        require_once '../app/views/landing.php';
+        require_once '../app/views/error.php';
     }
 
 

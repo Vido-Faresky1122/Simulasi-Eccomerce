@@ -16,5 +16,7 @@
     $router->add('GET', '/products/create', 'ProductController', 'create');
     $router->add('GET', '/products/{id}', 'ProductController', 'show');
 
+    $router->add('GET', '/', 'LandingController', 'index');
+    
     $router->run();
 ?>
