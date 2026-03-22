@@ -13,7 +13,7 @@ class ProductController
         require_once '../app/views/products/create.php';
     }
 
-        public function show(string $id)
+    public function show(string $id)
     {
         require_once '../app/views/products/show.php';
     }
