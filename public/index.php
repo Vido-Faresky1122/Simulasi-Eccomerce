@@ -10,6 +10,8 @@
 
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
+    $router->add('GET', '/checkout', 'CheckoutController', 'checkout');
+
 
     //Products Management
     $router->add('GET', '/products', 'ProductController', 'index');
