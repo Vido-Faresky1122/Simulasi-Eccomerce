@@ -10,11 +10,15 @@
 
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
+    $router->add('GET', '/checkout', 'CheckoutController', 'checkout');
+
 
     //Products Management
     $router->add('GET', '/products', 'ProductController', 'index');
     $router->add('GET', '/products/create', 'ProductController', 'create');
     $router->add('GET', '/products/{id}', 'ProductController', 'show');
 
+    $router->add('GET', '/', 'LandingController', 'index');
+    
     $router->run();
 ?>

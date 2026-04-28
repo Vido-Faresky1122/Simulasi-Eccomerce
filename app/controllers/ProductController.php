@@ -5,15 +5,15 @@ class ProductController
 {
     public function index()
     {
-        require_once '../app/views/users/login.php';
+        require_once '../app/views/products/products.php';
     }
 
     public function create()
     {
-        require_once '../app/views/users/register.php';
+        require_once '../app/views/products/create.php';
     }
 
-        public function show(string $id)
+    public function show(string $id)
     {
         require_once '../app/views/products/show.php';
     }
