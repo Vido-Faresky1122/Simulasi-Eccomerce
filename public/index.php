@@ -4,9 +4,12 @@
 
     $router = new Router();
 
+    //Auth Management
+    $router->add('GET', '/users/login', 'AuthController', 'login');
+    $router->add('GET', '/users/register', 'AuthController', 'register');
+    
     //Users Management
-    $router->add('GET', '/users/login', 'UserController', 'login');
-    $router->add('GET', '/users/register', 'UserController', 'register');
+    $router->add('GET', '/users/{id}', 'UserController', 'show');
 
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
