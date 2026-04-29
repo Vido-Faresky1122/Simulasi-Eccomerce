@@ -3,14 +3,14 @@ namespace App\Controller;
 
 class UserController
 {
-    public function login()
+    public function show()
     {
-        require_once '../app/views/users/login.php';
+        require_once '../app/views/users/show.php';
     }
 
-    public function register()
+        public function showAdmin()
     {
-        require_once '../app/views/users/register.php';
+        require_once '../app/views/users/showAdmin.php';
     }
 }
 
