@@ -10,7 +10,8 @@
     
     //Users Management
     $router->add('GET', '/users/{id}', 'UserController', 'show');
-
+    $router->add('GET', '/users/{id}/a', 'UserController', 'showAdmin');
+    
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
     $router->add('GET', '/checkout', 'CheckoutController', 'checkout');
