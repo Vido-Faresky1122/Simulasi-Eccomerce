@@ -7,6 +7,11 @@ class UserController
     {
         require_once '../app/views/users/show.php';
     }
+
+        public function showAdmin()
+    {
+        require_once '../app/views/users/showAdmin.php';
+    }
 }
 
 
