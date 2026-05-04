@@ -1,34 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link href="/css/output.css" rel="stylesheet">
-</head>
-
-<body class="bg-gray-100 min-h-screen flex flex-col bg-linear-to-b from-[#4C128B] to-[#814FBE]">
-
-  <header class="bg-[#4C128B] shadow-sm z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-
-        <div class="shrink-0">
-          <a href="/" class="text-2xl font-bold text-yellow-300">Sudi Mart</a>
-        </div>
-
-        <div class="flex items-center space-x-4">
-          <a href="#" class="hover:underline text-m text-yellow-300">About us</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
- <main class="flex-1 px-6 py-6 max-w-4xl mx-auto w-full space-y-5">
- 
     <!-- My Profile Card -->
-    <div class="text-yellow-300 rounded-2xl p-7 shadow-xl">
+    <div class="text-yellow-300 rounded-2xl p-7 shadow-xl w-230">
       <h2 class="text-sudi-yellow font-bold text-lg">My Profile</h2>
       <p class="text-yellow-300 text-sm mb-3">Manage your account</p>
       <hr class="text-yellow-300 mb-6"/>
@@ -69,7 +40,7 @@
     </div>
  
     <!-- History Card -->
-    <div class="bg-sudi-card rounded-2xl p-7 shadow-xl">
+    <div class="bg-sudi-card rounded-2xl p-7 shadow-xl w-230">
       <h2 class="text-yellow-300 font-bold text-lg">History</h2>
       <p class="text-yellow-300 text-sm mb-3">Manage your history</p>
       <hr class="text-yellow-300 mb-4"/>
@@ -126,7 +97,7 @@
     </div>
 
      <!-- Users Card -->
-    <div class="bg-sudi-card rounded-2xl p-7 shadow-xl">
+    <div class="bg-sudi-card rounded-2xl p-7 shadow-xl w-230">
       <h2 class="text-yellow-300 font-bold text-lg">Pengguna lain</h2>
       <p class="text-yellow-300 text-sm mb-3">Melihat profile orang lain</p>
       <hr class="text-yellow-300 mb-4"/>
@@ -190,33 +161,3 @@
 
     </div>
  
-  </main>
-
-  <footer class="mt-16 bg-[#4C128B] text-yellow-300 py-10 px-10 z-10">
-    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-
-      <div>
-        <h2 class="text-lg font-semibold mb-3">About US</h2>
-        <p class="text-sm text-yellow-300">
-          Sudi Mart adalah mitra andalan kebutuhan warga sekolah,
-          menyediakan berbagai alat tulis, keperluan belajar,
-          serta layanan pendukung sekolah yang cepat dan berkualitas.
-        </p>
-      </div>
-
-      <div>
-        <h2 class="text-lg font-semibold mb-3">Contact Us</h2>
-        <p class="text-sm text-yellow-300">
-          IG : @sudi_martt <br>
-          TT : sm.mart <br>
-          X : sudi-M <br>
-          WA : +62 812 5609 8744
-        </p>
-      </div>
-
-    </div>
-  </footer>
-
-</body>
-
-</html>

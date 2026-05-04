@@ -1,21 +1,25 @@
 <?php
 namespace App\Controller;
 
-class ProductController
+require_once '../app/core/Controller.php';
+
+use App\Core\Controller;
+
+class ProductController extends Controller
 {
     public function index()
     {
-        require_once '../app/views/products/products.php';
+        $this->view('products.products');
     }
 
     public function create()
     {
-        require_once '../app/views/products/create.php';
+        $this->view('products.create');
     }
 
     public function show(string $id)
     {
-        require_once '../app/views/products/show.php';
+        $this->view('products.show');
     }
 
 }

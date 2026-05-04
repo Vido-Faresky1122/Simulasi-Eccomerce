@@ -24,4 +24,4 @@
 
 </div>
 
-<img src="/assets/logindesign2.png" alt="" class="w-200 absolute z-0 bottom-6 right-0 object-cover pointer-events-none">
+<img src="/assets/logindesign2.png" alt="" class="w-200 absolute -z-10 bottom-6 right-0 object-cover pointer-events-none">

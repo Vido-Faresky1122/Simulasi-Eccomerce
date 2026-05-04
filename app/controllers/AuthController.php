@@ -4,17 +4,18 @@ require_once '../app/core/Controller.php';
 require_once '../app/models/User.php';
 
 use App\Core\Controller;
+use App\Models\User;
 
 class AuthController extends Controller
 {
     public function login()
     {
-        
+        $this->view('users.login');
     }
 
     public function register()
     {
-        require_once '../app/views/users/register.php';
+        $this->view('users.register');
     }
 }
 
