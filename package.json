@@ -6,4 +6,5 @@
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./app/resources/css/input.css -o ./public/css/output.css --watch"
   }
+
 }

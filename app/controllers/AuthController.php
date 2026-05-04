@@ -1,16 +1,21 @@
 <?php
 namespace App\Controller;
+require_once '../app/core/Controller.php';
+require_once '../app/models/User.php';
 
-class AuthController
+use App\Core\Controller;
+use App\Models\User;
+
+class AuthController extends Controller
 {
     public function login()
     {
-        require_once '../app/views/users/login.php';
+        $this->view('users.login');
     }
 
     public function register()
     {
-        require_once '../app/views/users/register.php';
+        $this->view('users.register');
     }
 }
 

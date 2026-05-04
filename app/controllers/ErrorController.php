@@ -3,12 +3,13 @@ namespace App\Controller;
 require_once '../app/core/Controller.php';
 
 use App\Core\Controller;
-class CartController extends Controller
+
+class ErrorController extends Controller
 {
 
-    public function cart()
+    public function index()
     {
-        $this->view('cart');
+        $this->view('error');
     }
 
 }

@@ -1,12 +1,14 @@
 <?php
 namespace App\Controller;
+require_once '../app/core/Controller.php';
 
-class CheckoutController
+use App\Core\Controller;
+class CheckoutController extends Controller
 {
 
     public function checkout()
     {
-        require_once '../app/views/checkout.php';
+        $this->view('checkout');
     }
 
 }

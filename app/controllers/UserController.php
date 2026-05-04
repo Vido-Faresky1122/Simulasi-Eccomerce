@@ -1,16 +1,21 @@
 <?php
 namespace App\Controller;
+require_once '../app/core/Controller.php';
+require_once '../app/models/User.php';
 
-class UserController
+use App\Core\Controller;
+use App\Models\User;
+
+class UserController extends Controller
 {
     public function show()
     {
-        require_once '../app/views/users/show.php';
+        $this->view('users.show');
     }
 
         public function showAdmin()
     {
-        require_once '../app/views/users/showAdmin.php';
+        $this->view('users.showAdmin');
     }
 }
 
