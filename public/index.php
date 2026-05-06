@@ -5,8 +5,10 @@
     $router = new Router();
 
     //Auth Management
-    $router->add('GET', '/users/login', 'AuthController', 'login');
-    $router->add('GET', '/users/register', 'AuthController', 'register');
+    $router->add('GET', '/login', 'AuthController', 'loginView');
+    $router->add('GET', '/register', 'AuthController', 'registerView');
+    $router->add('POST', '/login', 'AuthController', 'loginPost');
+    $router->add('POST', '/register', 'AuthController', 'registerPost');
     
     //Users Management
     $router->add('GET', '/users/{id}', 'UserController', 'show');

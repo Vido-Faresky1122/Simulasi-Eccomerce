@@ -17,11 +17,14 @@ class Router
         ];
     }
 
-
-
     public function run()
     {
         $method = $_SERVER['REQUEST_METHOD'];
+
+        if ($method === 'POST' && isset($_POST['_method'])) {
+            $method = strtoupper($_POST['_method']);
+        }
+
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
         foreach ($this->routes as $route) {
@@ -32,10 +35,13 @@ class Router
             );
 
             $pattern = '#^' . $pattern . '$#';
+            
+            if ($route['method'] === $method && preg_match($pattern, $uri, $matches)) {
 
-            if (preg_match($pattern, $uri, $matches)) {
                 array_shift($matches);
+
                 require_once '../app/controllers/' . $route['controller'] . '.php';
+
                 $function = $route['function'];
 
                 $controllerClass = 'App\\Controller\\' . $route['controller'];
@@ -47,14 +53,7 @@ class Router
             }
         }
 
-
-
         http_response_code(404);
         require_once '../app/views/error.php';
     }
-
-
-
 }
-
-?>
