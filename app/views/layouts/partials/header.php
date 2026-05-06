@@ -1,4 +1,4 @@
-<header class="bg-[#3a0d7a] shadow-sm z-10 fixed top-0 left-0 right-0 z-500 transition-all duration-500">
+<header class="bg-[#3a0d7a] shadow-sm fixed top-0 left-0 right-0 z-500 transition-all duration-500">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
 

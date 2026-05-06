@@ -4,16 +4,18 @@
 
 <div class="shadow-md rounded-xl bg-[#4C128B] p-15 w-120">
 
-  <form class="space-y-6">
-    <input type="text" placeholder="Email/Username"
+  <form class="space-y-6" method="POST" action="/login">
+    <input type="text" placeholder="Email/Username" name="email" id="email" required
       class="w-full border bg-white rounded-md px-3 py-5 focus:outline-none focus:ring-2 focus:ring-indigo-400">
 
-    <input type="password" placeholder="Password"
+    <input type="password" placeholder="Password" name="password" id="email" required
       class="w-full border bg-white rounded-md px-3 py-5 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+
+
 
     <p class="text-xs text-yellow-300">
       don't have an account?
-      <a href="/users/register" class="underline">Click Here</a>
+      <a href="/register" class="underline">Click Here</a>
     </p>
 
     <button type="submit"
@@ -24,4 +26,5 @@
 
 </div>
 
-<img src="/assets/logindesign2.png" alt="" class="w-200 absolute -z-10 bottom-6 right-0 object-cover pointer-events-none">
+<img src="/assets/logindesign2.png" alt=""
+  class="w-200 absolute -z-10 bottom-6 right-0 object-cover pointer-events-none">

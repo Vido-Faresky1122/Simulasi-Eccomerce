@@ -40,42 +40,72 @@ class user extends Database
 
     public function insert(array $data)
     {
-        $nis = htmlspecialchars($data['nis']);
         $name = htmlspecialchars($data['name']);
-        $class = htmlspecialchars($data['class']);
-        $phoneNumber = htmlspecialchars($data['phone_number']);
+        $email = htmlspecialchars($data['email']);
+        $password = htmlspecialchars($data['password']);
+        $passwordConfirmation = $data['confirm'];
+        $birthDate = $data['birth_date'];
+        $gender = htmlspecialchars($data['gender']);
 
-        $query = "INSERT INTO {$this->table} (nis, name, class, phone_number) VALUES (?, ?, ?, ?)";
+        if ($password != $passwordConfirmation) {
+            echo "
+                <script>
+                    alert('Password and Password Confirmation are not match');
+                    window.location.href = '/register   ';
+                </script>
+            ";
+            exit;
+        }
+
+        $passwordHashed = password_hash($password, PASSWORD_BCRYPT);
+        $query = "INSERT INTO {$this->table} (name, email, password, birth_date, gender) VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->connection->prepare($query);
-        $stmt->bind_param("ssss", $nis, $name, $class, $phoneNumber);
+        $stmt->bind_param("sssss", $name, $email, $passwordHashed, $birthDate, $gender);
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
-            header('Location: /users');
+            header('Location: /');
             exit();
         } else {
             die('Error to store users : ' . $stmt->error);
         }
     }
 
-    public function update(int $id, array $data)
+    public function select(array $data)
     {
-        $name = htmlspecialchars($data['name']);
-        $nis = htmlspecialchars($data['nis']);
-        $class = htmlspecialchars($data['class']);
-        $phoneNumber = htmlspecialchars($data['phone_number']);
-        $id = htmlspecialchars($id);
+        $email = htmlspecialchars($data['email']);
+        $password = htmlspecialchars($data['password']);
 
-        $query = "UPDATE {$this->table} SET name=?, nis=?, class=?, phone_number=? WHERE id=?";
+        $query = "SELECT * FROM users where email = ?";
         $stmt = $this->connection->prepare($query);
-        $stmt->bind_param("ssssi", $name, $nis, $class, $phoneNumber, $id);
+        $stmt->bind_param("s", $email);
         $stmt->execute();
 
-        if ($stmt->affected_rows > 0) {
-            header('Location: /users');
-            exit();
+        $user = $stmt->get_result()->fetch_assoc();
+
+        if (isset($user)) {
+            $isPasswordMatch = password_verify($password, $user['password']);
+
+            if ($isPasswordMatch) {
+                session_regenerate_id(true);
+                $_SESSION['user'] = $user;
+                header('Location: /');
+                exit;
+            } else {
+                echo "
+                    <script>
+                        alert('Email or Password wrong');
+                        window.location.href = '/login';
+                    </script>
+                ";
+            }
         } else {
-            die('Error to store users : ' . $stmt->error);
+            echo "
+                <script>
+                    alert('Email or Password wrong');
+                    window.location.href = '/login'
+                </script>
+            ";
         }
     }
 
