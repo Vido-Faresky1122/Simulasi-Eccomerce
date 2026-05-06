@@ -23,9 +23,7 @@
   <div id="cur"></div>
   <div id="cur-r"></div>
 
-  <!-- ════════════════════════════════════════════
-     NAVIGATION
-════════════════════════════════════════════ -->
+
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-500 transition-all duration-500">
     <div class="flex items-center justify-between px-8 lg:px-16 py-5">
 
@@ -90,83 +88,16 @@
   <section id="hero" class="relative min-h-screen flex items-center overflow-hidden clip-hero">
 
     <!-- BG layers -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#08001a] via-[#1a0445] to-[#08001a]"></div>
+    <div class="absolute inset-0  "></div>
     <div class="absolute inset-0 grid-tex opacity-100"></div>
     <div class="absolute inset-0"
       style="background:radial-gradient(ellipse 90% 80% at 65% 45%,rgba(107,31,212,.3) 0%,transparent 65%)"></div>
 
     <!-- Glow orb -->
-    <div class="glow-pulse absolute w-[600px] h-[600px] rounded-full pointer-events-none"
+    <div class="glow-pulse absolute w-150 h-150 rounded-full pointer-events-none"
       style="background:radial-gradient(circle,rgba(107,31,212,.22) 0%,transparent 70%);top:50%;left:62%;transform:translate(-50%,-50%)">
     </div>
 
-    <!-- Floating stationery (SVG-drawn) -->
-    <!-- Pen 1 -->
-    <svg class="float pen-draw absolute top-[14%] right-[18%] w-[200px] opacity-90 hidden lg:block"
-      style="--fr:-28deg;--fd:7s" viewBox="0 0 220 48" fill="none">
-      <rect x="8" y="18" width="170" height="12" rx="6" fill="url(#penBody)" />
-      <polygon points="178,18 208,24 178,30" fill="#3a0d7a" />
-      <polygon points="203,22 216,24 203,26" fill="#f5c842" />
-      <rect x="8" y="20" width="30" height="8" rx="4" fill="#1a0433" />
-      <circle cx="8" cy="24" r="6" fill="#2a0a5a" />
-      <defs>
-        <linearGradient id="penBody" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#4f26a8" />
-          <stop offset="50%" stop-color="#7b3fe4" />
-          <stop offset="100%" stop-color="#3a0d7a" />
-        </linearGradient>
-      </defs>
-    </svg>
-
-    <!-- Pencil -->
-    <svg class="float ruler-draw absolute bottom-[30%] left-[6%] w-[90px] opacity-75 hidden lg:block"
-      style="--fr:18deg;--fd:5.5s;--del:1.2s" viewBox="0 0 28 160" fill="none">
-      <rect x="4" y="20" width="20" height="120" rx="3" fill="url(#pencilBody)" />
-      <polygon points="4,140 14,158 24,140" fill="#f5c842" />
-      <polygon points="9,148 14,158 19,148" fill="#1a1a1a" />
-      <rect x="4" y="20" width="20" height="16" rx="2" fill="#c0a0e0" />
-      <rect x="7" y="36" width="14" height="3" rx="1" fill="rgba(255,255,255,.15)" />
-      <defs>
-        <linearGradient id="pencilBody" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stop-color="#f5c842" />
-          <stop offset="50%" stop-color="#e8b530" />
-          <stop offset="100%" stop-color="#c8952a" />
-        </linearGradient>
-      </defs>
-    </svg>
-
-    <!-- Notebook -->
-    <svg class="float absolute bottom-[18%] right-[8%] w-[140px] opacity-80 hidden lg:block"
-      style="--fr:-6deg;--fd:9s;--del:.4s" viewBox="0 0 140 180" fill="none">
-      <rect x="20" y="10" width="110" height="160" rx="4" fill="#1a0433" />
-      <rect x="20" y="10" width="110" height="160" rx="4" fill="url(#notebookCover)" opacity=".7" />
-      <rect x="20" y="10" width="18" height="160" rx="2" fill="#3a0d7a" />
-      <line x1="38" y1="40" x2="120" y2="40" stroke="rgba(255,255,255,.1)" stroke-width="1.5" />
-      <line x1="38" y1="56" x2="120" y2="56" stroke="rgba(255,255,255,.1)" stroke-width="1.5" />
-      <line x1="38" y1="72" x2="120" y2="72" stroke="rgba(255,255,255,.1)" stroke-width="1.5" />
-      <line x1="38" y1="88" x2="120" y2="88" stroke="rgba(255,255,255,.1)" stroke-width="1.5" />
-      <circle cx="29" cy="50" r="3" fill="#f5c842" opacity=".7" />
-      <circle cx="29" cy="80" r="3" fill="#f5c842" opacity=".7" />
-      <circle cx="29" cy="110" r="3" fill="#f5c842" opacity=".7" />
-      <circle cx="29" cy="140" r="3" fill="#f5c842" opacity=".7" />
-      <text x="45" y="28" font-family="Bebas Neue,cursive" font-size="11" fill="rgba(245,200,66,.6)"
-        letter-spacing="3">SUDIMART</text>
-      <defs>
-        <linearGradient id="notebookCover" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#6b1fd4" stop-opacity=".4" />
-          <stop offset="100%" stop-color="#08001a" stop-opacity=".1" />
-        </linearGradient>
-      </defs>
-    </svg>
-
-    <!-- Scissors -->
-    <svg class="float absolute top-[60%] right-[32%] w-[60px] opacity-60 hidden xl:block"
-      style="--fr:30deg;--fd:6s;--del:2s" viewBox="0 0 60 100" fill="none">
-      <line x1="10" y1="80" x2="40" y2="20" stroke="#9b5bff" stroke-width="3" stroke-linecap="round" />
-      <line x1="50" y1="80" x2="20" y2="20" stroke="#9b5bff" stroke-width="3" stroke-linecap="round" />
-      <circle cx="10" cy="82" r="7" stroke="#f5c842" stroke-width="2" fill="none" />
-      <circle cx="50" cy="82" r="7" stroke="#f5c842" stroke-width="2" fill="none" />
-    </svg>
 
     <!-- Hero content -->
     <div class="relative z-10 px-8 lg:px-20 pt-32 pb-40 max-w-3xl">
@@ -281,19 +212,6 @@
         <!-- Main card -->
         <div
           class="clip-card absolute inset-0 border border-pb/40 bg-gradient-to-br from-pm/30 to-void/80 backdrop-blur-sm overflow-hidden">
-          <!-- Abstract stationery arrangement (SVG) -->
-          <svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 500 500" fill="none">
-            <circle cx="250" cy="250" r="200" stroke="url(#circGrad)" stroke-width="1" />
-            <circle cx="250" cy="250" r="150" stroke="url(#circGrad)" stroke-width=".5" opacity=".5" />
-            <line x1="50" y1="250" x2="450" y2="250" stroke="rgba(245,200,66,.3)" stroke-width=".8" />
-            <line x1="250" y1="50" x2="250" y2="450" stroke="rgba(245,200,66,.3)" stroke-width=".8" />
-            <defs>
-              <linearGradient id="circGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#6b1fd4" />
-                <stop offset="100%" stop-color="#f5c842" stop-opacity=".4" />
-              </linearGradient>
-            </defs>
-          </svg>
           <div class="absolute inset-0 flex flex-col justify-end p-8">
             <p class="font-display text-5xl text-white/90 tracking-widest">E-COMMERCE</p>
             <p class="font-display text-5xl grad-text tracking-widest">ATK #1</p>
@@ -521,32 +439,12 @@
   <!-- ════════════════════════════════════════════
      SHOWCASE BANNER (full-width immersive)
 ════════════════════════════════════════════ -->
-  <section class="relative h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+  <section class="relative h-[70vh] min-h-100 flex items-center justify-center overflow-hidden">
     <!-- Animated gradient background simulating a stationery photo -->
-    <div class="absolute inset-0 bg-gradient-to-br from-[#1a0445] via-[#3a0d7a] to-[#0d0025]"></div>
+    <div class="absolute inset-0 bg-linear-to-br from-[#1a0445] via-[#3a0d7a] to-[#0d0025]"></div>
     <div class="absolute inset-0 grid-tex opacity-30"></div>
 
     <!-- Large decorative stationery scene SVG -->
-    <svg class="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1200 700" fill="none"
-      preserveAspectRatio="xMidYMid slice">
-      <!-- Ruler -->
-      <rect x="100" y="300" width="400" height="30" rx="4" fill="#f5c842" opacity=".3" />
-      <line x1="150" y1="300" x2="150" y2="315" stroke="#f5c842" stroke-width="1.5" opacity=".6" />
-      <line x1="200" y1="300" x2="200" y2="320" stroke="#f5c842" stroke-width="2" opacity=".6" />
-      <line x1="250" y1="300" x2="250" y2="315" stroke="#f5c842" stroke-width="1.5" opacity=".6" />
-      <!-- Pencils -->
-      <rect x="600" y="200" width="16" height="280" rx="4" fill="#f5c842" opacity=".25" />
-      <rect x="640" y="180" width="16" height="300" rx="4" fill="#9b5bff" opacity=".25" />
-      <rect x="680" y="220" width="16" height="260" rx="4" fill="#6b1fd4" opacity=".25" />
-      <!-- Scissors -->
-      <line x1="900" y1="200" x2="1000" y2="480" stroke="#cbbde8" stroke-width="5" stroke-linecap="round"
-        opacity=".2" />
-      <line x1="1000" y1="200" x2="900" y2="480" stroke="#cbbde8" stroke-width="5" stroke-linecap="round"
-        opacity=".2" />
-      <!-- Circles -->
-      <circle cx="200" cy="180" r="80" stroke="rgba(245,200,66,.15)" stroke-width="1" />
-      <circle cx="1000" cy="500" r="120" stroke="rgba(107,31,212,.2)" stroke-width="1" />
-    </svg>
 
     <div class="relative z-10 text-center px-8 sr scale">
       <p class="font-body text-xs tracking-[.5em] uppercase text-gold/70 mb-6 flex items-center justify-center gap-3">
