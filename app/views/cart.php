@@ -102,7 +102,7 @@
 
 <div class="flex items-center gap-8">
 
-  <button
+  <button onclick="window.location.href='/checkout'"
     class="bg-purple-900 text-yellow-300 font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-purple-800 transition">
     Check out
   </button>
