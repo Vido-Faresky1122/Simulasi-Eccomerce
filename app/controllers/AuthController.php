@@ -8,6 +8,7 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+
     public function loginView()
     {
         $this->view('users.login');
@@ -28,6 +29,17 @@ class AuthController extends Controller
     {
         $studentModel = new User();
         $studentModel->select($_POST);
+    }
+
+    public function logout()
+    {
+        session_start();
+
+        session_unset();
+        session_destroy();
+
+        header('Location: /');
+        exit;
     }
 }
 

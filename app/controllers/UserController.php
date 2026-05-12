@@ -8,9 +8,23 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function show()
+    public function show($id)
     {
-        $this->view('users.show');
+        session_start();
+        $userModel = new User();
+        if ($_SESSION['role'] === 'admin') {
+            $user = $userModel->getUser($id);
+        } else {
+            if ($_SESSION['user_id'] != $id) {
+                header('Location: /');
+                exit;
+            }
+            $user = $userModel->getUser($_SESSION['user_id']);
+        }
+
+        $this->view('users.show', [
+            'user' => $user
+        ]);
     }
 
         public function showAdmin()
