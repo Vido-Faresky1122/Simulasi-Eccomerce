@@ -9,10 +9,11 @@
     $router->add('GET', '/register', 'AuthController', 'registerView');
     $router->add('POST', '/login', 'AuthController', 'loginPost');
     $router->add('POST', '/register', 'AuthController', 'registerPost');
+    $router->add('GET', '/logout', 'AuthController', 'logout');
     
     //Users Management
     $router->add('GET', '/users/{id}', 'UserController', 'show');
-    $router->add('GET', '/users/{id}/a', 'UserController', 'showAdmin');
+    $router->add('GET', '/admin/{id}', 'UserController', 'showAdmin');
     
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');

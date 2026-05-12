@@ -73,39 +73,45 @@ class user extends Database
 
     public function select(array $data)
     {
+        session_start();
+
         $email = htmlspecialchars($data['email']);
         $password = htmlspecialchars($data['password']);
 
-        $query = "SELECT * FROM users where email = ?";
+        $query = "SELECT * FROM users WHERE email = ?";
         $stmt = $this->connection->prepare($query);
         $stmt->bind_param("s", $email);
         $stmt->execute();
-
         $user = $stmt->get_result()->fetch_assoc();
 
         if (isset($user)) {
             $isPasswordMatch = password_verify($password, $user['password']);
-
             if ($isPasswordMatch) {
                 session_regenerate_id(true);
                 $_SESSION['user'] = $user;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['role'] = $user['role'];
                 header('Location: /');
                 exit;
+
             } else {
+
                 echo "
-                    <script>
-                        alert('Email or Password wrong');
-                        window.location.href = '/login';
-                    </script>
-                ";
-            }
-        } else {
-            echo "
                 <script>
                     alert('Email or Password wrong');
-                    window.location.href = '/login'
+                    window.location.href = '/login';
                 </script>
             ";
+            }
+
+        } else {
+
+            echo "
+            <script>
+                alert('Email or Password wrong');
+                window.location.href = '/login';
+            </script>
+        ";
         }
     }
 
