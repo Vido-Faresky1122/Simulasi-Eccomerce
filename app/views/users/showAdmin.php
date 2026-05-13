@@ -21,19 +21,19 @@
         <div class="flex-1 space-y-4 text-base pt-2">
           <div class="flex">
             <span class="text-yellow-300 w-40 shrink-0">Name</span>
-            <span class="text-yellow-300 font-semibold">: Arianto Widodo Putri</span>
+            <span class="text-yellow-300 font-semibold">: <?= $user['name']; ?></span>
           </div>
           <div class="flex">
             <span class="text-yellow-300 w-40 shrink-0">Email</span>
-            <span class="text-yellow-300 font-semibold">: Ari*****@gmail.com</span>
+            <span class="text-yellow-300 font-semibold">: <?= $user['email']; ?></span>
           </div>
           <div class="flex">
             <span class="text-yellow-300 w-40 shrink-0">Gender</span>
-            <span class="text-yellow-300 font-semibold">: Male</span>
+            <span class="text-yellow-300 font-semibold">: <?= $user['gender']; ?></span>
           </div>
           <div class="flex">
             <span class="text-yellow-300 w-40 shrink-0">Tanggal Lahir</span>
-            <span class="text-yellow-300 font-semibold">: 17 Agustus 1945</span>
+            <span class="text-yellow-300 font-semibold">: <?= $user['birth_date']; ?></span>
           </div>
         </div>
       </div>

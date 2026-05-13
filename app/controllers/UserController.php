@@ -11,6 +11,7 @@ class UserController extends Controller
     public function show($id)
     {
         session_start();
+        $this->auth();
         $userModel = new User();
         if ($_SESSION['role'] === 'admin') {
             $user = $userModel->getUser($id);
@@ -27,9 +28,18 @@ class UserController extends Controller
         ]);
     }
 
-        public function showAdmin()
+    public function showAdmin()
     {
-        $this->view('users.showAdmin');
+        $this->auth();
+        if ($_SESSION['role'] !== 'admin') {
+            header('Location: /');
+            exit;
+        }
+        $userModel = new User();
+        $user = $userModel->getUser($_SESSION['user_id']);
+        $this->view('users.showAdmin', [
+            'user' => $user
+        ]);
     }
 }
 

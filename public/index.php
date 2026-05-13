@@ -12,8 +12,8 @@
     $router->add('GET', '/logout', 'AuthController', 'logout');
     
     //Users Management
-    $router->add('GET', '/users/{id}', 'UserController', 'show');
-    $router->add('GET', '/admin/{id}', 'UserController', 'showAdmin');
+    $router->add('GET', '/users/show/{id}', 'UserController', 'show');
+    $router->add('GET', '/admin/profile', 'UserController', 'showAdmin');
     
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
