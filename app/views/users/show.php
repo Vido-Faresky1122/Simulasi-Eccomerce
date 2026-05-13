@@ -23,7 +23,7 @@ $maskedEmail = $name . '*****@' . $emailParts[1];
 
     <!-- Info -->
     <div class="flex-1 space-y-4 text-base pt-2">
-      <div class="flex">
+      <div class="flex">  
         <span class="text-yellow-300 w-40 shrink-0">Name</span>
         <span class="text-yellow-300 font-semibold">: <?= $user['name']; ?></span>
       </div>

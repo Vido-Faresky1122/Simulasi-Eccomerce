@@ -2,15 +2,21 @@
 namespace App\Controller;
 
 require_once '../app/core/Controller.php';
+require_once '../app/models/Product.php';
 
 use App\Core\Controller;
+use App\Models\Product;
 
 class ProductController extends Controller
 {
     public function index()
     {
         $this->auth();
-        $this->view('products.products');
+        $productModel = new Product();
+        $products = $productModel->getProducts();
+        $this->view('products.products', [
+            'products' => $products
+        ]);
     }
 
     public function create()
@@ -22,7 +28,11 @@ class ProductController extends Controller
     public function show(string $id)
     {
         $this->auth();
-        $this->view('products.show');
+        $productModel = new Product();
+        $product = $productModel->getProduct($id);
+        $this->view('products.show', [
+            'product' => $product
+        ]);
     }
 
 }
