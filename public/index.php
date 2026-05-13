@@ -18,6 +18,8 @@
     // Route
     $router->add('GET', '/cart', 'CartController', 'cart');
     $router->add('GET', '/checkout', 'CheckoutController', 'checkout');
+    $router->add('GET', '/aboutus', 'AboutUsController', 'aboutus');
+
 
 
     //Products Management
