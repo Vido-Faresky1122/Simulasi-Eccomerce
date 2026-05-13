@@ -51,7 +51,7 @@
     <p>Nama produk : Easy Gel Premium 1.0mm</p>
     <p>Kategori : Gel</p>
     <p>Merek : Pt. Indosat</p>
-    <p>Kondisi : Baru</p>
+    <p>Kondisi : Baru lihat</p>
     <p>Garansi : Sampai rusak</p>
     <p>Cara Pengiriman : Chat dulu lewat gepin</p>
     <p>Jaminan pengiriman : 1 Tahun</p>
