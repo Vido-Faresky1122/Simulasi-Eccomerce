@@ -8,6 +8,7 @@ class CartController extends Controller
 
     public function cart()
     {
+        $this->auth();
         $this->view('cart');
     }
 

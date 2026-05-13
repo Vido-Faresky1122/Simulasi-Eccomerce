@@ -8,6 +8,7 @@ class CheckoutController extends Controller
 
     public function checkout()
     {
+        $this->auth();
         $this->view('checkout');
     }
 

@@ -9,16 +9,19 @@ class ProductController extends Controller
 {
     public function index()
     {
+        $this->auth();
         $this->view('products.products');
     }
 
     public function create()
     {
+        $this->auth();
         $this->view('products.create');
     }
 
     public function show(string $id)
     {
+        $this->auth();
         $this->view('products.show');
     }
 
