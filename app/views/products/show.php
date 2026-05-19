@@ -1,15 +1,21 @@
 <section class="max-w-5xl mx-auto mt-10 bg-[#4C128B] rounded-2xl shadow-lg p-20 grid md:grid-cols-2 gap-6">
 
   <div>
-    <img src="/assets/penkenko.png" class="mx-auto mb-4">
+    <img src="<?= $product['image']; ?>" class="mx-auto mb-4">
   </div>
 
   <div class="flex flex-col justify-between border-l-2 border-indigo-500 gap-20 pl-6 w-200">
 
     <div>
-      <h2 class="text-3xl font-semibold mb-2 text-yellow-300">Easy Gel Premium 1.0mm</h2>
+      <h2 class="text-3xl font-semibold mb-2 text-yellow-300">
+        <?= $product['name']; ?>
+      </h2>
       <p class="text-yellow-300 text-xl mb-6">
-        Kesayangan Gepin sayang gel
+        <?php
+        echo strlen($product['description']) > 35
+          ? substr($product['description'], 0, 35) . '...'
+          : $product['description'];
+        ?>
       </p>
     </div>
 
@@ -44,16 +50,6 @@
   </h3>
 
   <p class="text-yellow-300 mb-4">
-    Kesayangan Gepin sayang gel
+    <?= $product['description']; ?>
   </p>
-
-  <div class="grid md:grid-cols-1 text-sm text-yellow-300 gap-y-2">
-    <p>Nama produk : Easy Gel Premium 1.0mm</p>
-    <p>Kategori : Gel</p>
-    <p>Merek : Pt. Indosat</p>
-    <p>Kondisi : Baru lihat</p>
-    <p>Garansi : Sampai rusak</p>
-    <p>Cara Pengiriman : Chat dulu lewat gepin</p>
-    <p>Jaminan pengiriman : 1 Tahun</p>
-  </div>
 </section>

@@ -7,7 +7,7 @@
     <div class="grid grid-cols-4 gap-8 justify-center">
 
         <?php foreach ($products as $product): ?>
-            <a href="/products/1">
+            <a href="/products/<?= $product['id']; ?>">
                 <div class="w-65 bg-linear-to-b from-purple-700 to-purple-900 rounded-2xl shadow-xl overflow-hidden">
 
 
