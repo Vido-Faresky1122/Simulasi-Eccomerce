@@ -43,7 +43,7 @@ Our name is Sudimart Team and we are web developers from Indonesia 🇮🇩
 
 ## ⚙️ How to Setup Database
 
-1. Download the SQL file from GitHub named `sudimart.sql`
+1. Download the SQL file from GitHub named `sch_eccomerce.sql`
 2. Open the Laragon application
 3. Click the **Database** button
 4. Login using:
@@ -52,11 +52,11 @@ Our name is Sudimart Team and we are web developers from Indonesia 🇮🇩
 5. Click the **New** button on the left menu
 6. Enter database name:
    ```sql
-   sudimart
+   sch_eccomerce
    ```
 7. Click the **Create** button
 8. Press the **Import** button on the top bar
-9. Click **Choose File** and select `sudimart.sql`
+9. Click **Choose File** and select `sch_eccomerce.sql`
 10. Click the **Import** button
 
 > If you use a different database name, change the database configuration inside:
@@ -133,7 +133,7 @@ Nama kami adalah Tim Sudimart dan kami adalah pengembang web dari Indonesia
 
 ## ⚙️ Cara Mengatur Database
 
-1. Download file SQL dari GitHub bernama `sudimart.sql`
+1. Download file SQL dari GitHub bernama `sch_eccomerce.sql`
 2. Buka aplikasi Laragon
 3. Klik tombol **Database**
 4. Login menggunakan:
@@ -142,11 +142,11 @@ Nama kami adalah Tim Sudimart dan kami adalah pengembang web dari Indonesia
 5. Klik tombol **New** pada menu kiri
 6. Masukkan nama database:
    ```sql
-   sudimart
+   sch_eccomerce
    ```
 7. Klik tombol **Create**
 8. Tekan tombol **Import** pada bagian atas
-9. Klik **Choose File** lalu pilih file `sudimart.sql`
+9. Klik **Choose File** lalu pilih file `sch_eccomerce.sql`
 10. Klik tombol **Import**
 
 > Jika menggunakan nama database yang berbeda, ubah konfigurasi database pada:
