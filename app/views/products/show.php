@@ -19,27 +19,40 @@
       </p>
     </div>
 
-    <div class="flex items-start gap-12 mb-6 flex-col">
+    <form action="/cart/add" method="POST">
+
+      <input type="hidden" name="product_id" value="<?= $product['id']; ?>">
+      <input type="hidden" name="quantity" id="qty-input" value="1">
+
       <div class="flex gap-7 items-center">
-        <button
-          class="text-s w-10 h-10 border bg-yellow-300 text-indigo-600 rounded-full transition duration-150 ease-in-out hover:cursor-pointer hover:bg-yellow-100">-</button>
-        <span class="text-yellow-300 text-2xl">1</span>
-        <button
-          class="text-s w-10 h-10 border text-yellow-300 rounded-full transition duration-150 ease-in-out hover:cursor-pointer hover:bg-yellow-100">+</button>
+
+        <button type="button" class="bg-yellow-300 rounded-full w-8 h-8" id="btn-minus">
+          -
+        </button>
+
+        <span class="text-yellow-300" id="qty-display">1</span>
+
+        <button type="button" class="rounded-full w-8 h-8 border-2 border-yellow-300 text-yellow-300" id="btn-plus">
+          +
+        </button>
+
       </div>
-      <div class="flex gap-4">
-        <button
-          class="hover:cursor-pointer px-8 py-2 border-2 border-yellow-300 text-yellow-300 rounded-lg transition duration-150 ease-in-out hover:bg-yellow-100 font-bold ">
+
+      <div class="flex gap-4 mt-6">
+
+        <button type="submit"
+          class="hover:cursor-pointer px-8 py-2 border-2 border-yellow-300 text-yellow-300 rounded-lg hover:bg-yellow-100 font-bold">
           Beli Sekarang
         </button>
-        <a href="/cart">
-          <button
-            class="hover:cursor-pointer px-8 py-2 bg-yellow-300 text-indigo-600 rounded-lg transition duration-150 ease-in-out hover:bg-yellow-100 w-40 font-bold">
-            Keranjang
-          </button>
-        </a>
+
+        <button type="submit"
+          class="hover:cursor-pointer px-8 py-2 bg-yellow-300 text-indigo-600 rounded-lg hover:bg-yellow-100 w-40 font-bold">
+          Keranjang
+        </button>
+
       </div>
-    </div>
+
+    </form>
 
   </div>
 </section>
@@ -53,3 +66,28 @@
     <?= $product['description']; ?>
   </p>
 </section>
+
+<script>
+  let qty = 1;
+
+  const qtyInput = document.getElementById("qty-input");
+  const qtyDisplay = document.getElementById("qty-display");
+
+  document.getElementById("btn-plus").addEventListener("click", function () {
+    qty++;
+
+    qtyInput.value = qty;
+    qtyDisplay.textContent = qty;
+  });
+
+  document.getElementById("btn-minus").addEventListener("click", function () {
+
+    if (qty > 1) {
+      qty--;
+
+      qtyInput.value = qty;
+      qtyDisplay.textContent = qty;
+    }
+
+  });
+</script>
