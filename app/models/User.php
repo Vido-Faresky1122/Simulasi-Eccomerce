@@ -131,5 +131,13 @@ class user extends Database
             die('Error to store users : ' . $stmt->error);
         }
     }
+
+    public function updatePhoto($id, $image)
+    {
+        $query = "UPDATE users SET image = ? WHERE id = ?";
+        $stmt = $this->connection->prepare($query);
+        $stmt->bind_param("si", $image, $id);
+        $stmt->execute();
+    }
 }
 ?>

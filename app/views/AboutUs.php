@@ -68,7 +68,7 @@
   </nav>
  
   <!-- ── HERO ── -->
-  <section class="text-center py-20 px-6 bg-gradient-to-b from-brand-purple to-brand-violet">
+  <section class="text-center py-20 px-6 bg-linear-to-b from-brand-purple to-brand-violet">
     <p class="text-xs uppercase tracking-[.35em] text-yellow-300 font-body font-semibold mb-3 animate-fadeUp">About Us</p>
     <h1 class="font-display text-4xl md:text-5xl font-black leading-tight text-yellow-300 animate-fadeUp delay-100">
       ATK LENGKAP,<br/>BELANJA PRAKTIS
