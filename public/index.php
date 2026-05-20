@@ -17,10 +17,12 @@ $router->add('GET', '/users/show/{id}', 'UserController', 'show');
 $router->add('GET', '/admin/profile', 'UserController', 'showAdmin');
 
 // Route
-$router->add('GET', '/cart', 'CartController', 'cart');
-$router->add('GET', '/checkout', 'CheckoutController', 'checkout');
 $router->add('GET', '/aboutus', 'AboutUsController', 'aboutus');
-
+$router->add('GET', '/cart', 'CartController', 'cart');
+$router->add('POST', '/cart/add', 'CartController', 'add');
+$router->add('POST', '/cart/delete', 'CartController', 'delete');
+$router->add('GET', '/checkout', 'CheckoutController', 'checkout');
+$router->add('POST', '/checkout/post', 'CheckoutController', 'checkoutPost');
 
 
 //Products Management
